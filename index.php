@@ -29,129 +29,157 @@ include 'inc/php/connect.php';
        <img src="img/logo/al-logo.png" alt="Logo" id="a-logo">
   </h1>
 
-
-
   <!--
-  col box left
+  Col Box left
   -->
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 
-  <div class="col-lg-3 col-md-6 col-sm-6 ">
+    <!--col box left-->
+    <div class="col-lg-6 col-md-6 col-sm-12 ">
 
-    <!--
-      1-1 Item pulled from DataBase
-    -->
-   <div class="home-product-sm">
-   <?php
-          $query = mysql_query("SELECT name, url FROM post WHERE  id = '23' ");
-          while($run = mysql_fetch_array($query)){
-          $pname = $run['name'];
-          $url = $run['url'];
-          ?>
+    <!--1-1 Item pulled from DataBase-->
+     <div class="home-product-sm">
+     <?php
+            $query = mysql_query("SELECT name, url FROM post WHERE  id = '25' ");
+            while($run = mysql_fetch_array($query)){
+            $pname = $run['name'];
+            $url = $run['url'];
+            ?>
 
-    <a href="#">
-     <div class="img-box">
-      <img class="img-responsive" src="uploads/<?php echo "$url"; ?>" alt="">
-     </div>
-     <div class="title-box">
-      <h5><strong><?php echo $pname; ?></strong></h5>
-      <h5><small><?php echo "This is a example project, to find the full version
-       or other projects like this go to Electronics Portfolio";  ?></small></h5>
-     </div>
-    </a>
-    <?php } ?> <!-- end of php -->
-   </div> <!-- end of div -->
+      <a href="#">
+       <div class="img-box">
+        <img class="img-responsive" src="uploads/<?php echo "$url"; ?>" alt="">
+       </div>
+       <div class="title-box">
+        <h5><strong><?php echo $pname; ?></strong></h5>
+        <h5><small><?php echo "This is a example project, to find the full version
+         or other projects like this go to Electronics Portfolio";  ?></small></h5>
+       </div>
+      </a>
+      <?php } ?> <!-- end of php -->
+     </div> <!-- end of div -->
 
-<!--
-    1-1 Item pulled from DataBase
-  -->
-  <div class="home-product-sm">
-  <?php
-         $query = mysql_query("SELECT name, url FROM post WHERE  id = '16' ");
-         while($run = mysql_fetch_array($query)){
-         $pname = $run['name'];
-         $url = $run['url'];
-         ?>
-
-   <a href="#">
-    <div class="img-box">
-     <img class="img-responsive" src="uploads/<?php echo "$url"; ?>" alt="">
-    </div>
-    <div class="title-box">
-     <h5><strong><?php echo $pname; ?></strong></h5>
-     <h5><small><?php echo "This is a example project, to find the full version
-      or other projects like this go to Electronics Portfolio";  ?></small></h5>
-    </div>
-   </a>
-   <?php } ?> <!-- end of php -->
-  </div> <!-- end of div -->
-
-    <!--
-     Local link to GitHub
-    -->
-
+    <!--1-2 Item pulled from DataBase-->
     <div class="home-product-sm">
+    <?php
+           $query = mysql_query("SELECT name, url FROM post WHERE  id = '19' ");
+           while($run = mysql_fetch_array($query)){
+           $pname = $run['name'];
+           $url = $run['url'];
+           ?>
+
      <a href="#">
-     <div class="img-box">
-     <img class="img-responsive" src="img/home/3.gif" alt="">
-     </div>
-     <div class="title-box">
-      <h5>Electronics Portflio (Example)</h5>
-      <h5><small><?php echo "This is a example project, to find the full version
-       or other projects like this go to Electronics Portfolio";  ?></small></h5>
-     </div>
-    </a>
-   </div>
+      <div class="img-box">
+       <img class="img-responsive" src="uploads/<?php echo "$url"; ?>" alt="">
+      </div>
+      <div class="title-box">
+       <h5><strong><?php echo $pname; ?></strong></h5>
+       <h5><small><?php echo "This is a example project, to find the full version
+        or other projects like this go to Electronics Portfolio";  ?></small></h5>
+      </div>
+     </a>
+     <?php } ?> <!-- end of php -->
+    </div> <!-- end of div -->
 
-  </div> <!-- end of left-->
+      <!--1-3 Item pulled from DataBase-->
+      <div class="home-product-sm">
+      <?php
+             $query = mysql_query("SELECT name, url FROM post WHERE  id = '14' ");
+             while($run = mysql_fetch_array($query)){
+             $pname = $run['name'];
+             $url = $run['url'];
+             ?>
+
+       <a href="#">
+        <div class="img-box">
+         <img class="img-responsive" src="uploads/<?php echo "$url"; ?>" alt="">
+        </div>
+        <div class="title-box">
+         <h5><strong><?php echo $pname; ?></strong></h5>
+         <h5><small><?php echo "This is a example project, to find the full version
+          or other projects like this go to Electronics Portfolio";  ?></small></h5>
+        </div>
+       </a>
+       <?php } ?> <!-- end of php -->
+      </div> <!-- end of div -->
+
+    </div><!--end of left-->
+
+    <!--col box right-->
+    <div class="col-lg-6 col-md-6 col-sm-12 ">
+
+        <!--1-3 Item pulled from DataBase-->
+        <div class="home-product-sm">
+        <?php
+               $query = mysql_query("SELECT name, url FROM post WHERE  id = '22' ");
+               while($run = mysql_fetch_array($query)){
+               $pname = $run['name'];
+               $url = $run['url'];
+        ?>
+
+         <a href="#">
+          <div class="img-box">
+           <img class="img-responsive" src="uploads/<?php echo "$url"; ?>" alt="">
+          </div>
+          <div class="title-box">
+           <h5><strong><?php echo $pname; ?></strong></h5>
+           <h5><small><?php echo "This is a example project, to find the full version
+            or other projects like this go to Electronics Portfolio";  ?></small></h5>
+          </div>
+         </a>
+         <?php } ?> <!-- end of php -->
+        </div> <!-- end of div -->
+
+     <div class="home-product-sm">
+      <a href="https://github.com/Jeffreyumd/PHP-Practice#php-practice">
+       <div class="img-box">
+        <img class="img-responsive" src="img/home/phpicon.png" alt="">
+       </div>
+       <div class="title-box">
+        <h5>PHP-Practice (GitHub)</h5>
+        <h5><small>Check out a few of my php source code on github. GitHub is a code hosting platform for version control and
+        collaboration. It lets you and others work together on projects from </small></h5>
+       </div>
+      </a>
+     </div>
+
+       <!--1-3 Item pulled from DataBase-->
+       <div class="home-product-sm">
+       <?php
+              $query = mysql_query("SELECT name, url FROM post WHERE  id = '23' ");
+              while($run = mysql_fetch_array($query)){
+              $pname = $run['name'];
+              $url = $run['url'];
+              ?>
+
+        <a href="#">
+         <div class="img-box">
+          <img class="img-responsive" src="uploads/<?php echo "$url"; ?>" alt="">
+         </div>
+         <div class="title-box">
+          <h5><strong><?php echo $pname; ?></strong></h5>
+          <h5><small><?php echo "This is a example project, to find the full version
+           or other projects like this go to Electronics Portfolio";  ?></small></h5>
+         </div>
+        </a>
+        <?php } ?> <!-- end of php -->
+       </div> <!-- end of div -->
+
+    </div><!--end of right-->
+
+  </div>
+  <!--
+  end of col left
+  -->
+
+
+
+
 
   <!--
-  col box right
+  col box right start
   -->
-  <div class="col-lg-3 col-md-6 col-sm-6 ">
-
-    <div class="home-product-sm">
-    <a href="#">
-     <div class="img-box">
-     <img class="img-responsive" src="img/home/1.gif" alt="">
-     </div>
-     <div class="title-box">
-      <h5>our page should have one inch margins all the way aroun </h5>
-      <h5><small>our page should have one inch margins all the way aroun</small></h5>
-     </div>
-    </a>
-   </div>
-
-   <div class="home-product-sm">
-    <a href="https://github.com/Jeffreyumd/PHP-Practice#php-practice">
-     <div class="img-box">
-      <img class="img-responsive" src="img/home/phpicon.png" alt="">
-     </div>
-     <div class="title-box">
-      <h5>PHP-Practice (GitHub)</h5>
-      <h5><small>Check out a few of my php source code on github. GitHub is a code hosting platform for version control and
-      collaboration. It lets you and others work together on projects from </small></h5>
-     </div>
-    </a>
-   </div>
-
-   <div class="home-product-sm">
-    <a href="#">
-     <div class="img-box">
-      <img class="img-responsive" src="img/home/Space Survivor.gif" alt="">
-     </div>
-     <div class="title-box">
-      <h5>our page should have one inch margins all the way aroun </h5>
-      <h5><small>our page should have one inch margins all the way aroun</small></h5>
-     </div>
-    </a>
-   </div>
-
-
-  </div> <!-- end of right-->
-
-
-
-  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 "> <!-- col box left start -->
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 
    <!-- image on the left -->
     <div class="home-product">
@@ -182,17 +210,13 @@ include 'inc/php/connect.php';
      </div>
     </a>
    </div>
-  </div> <!-- end col box left -->
+ </div>
+ <!--
+ end col box right
+  -->
 
 </div> <!-- end of row -->
-
 </div> <!-- end of body page -->
-
-
-
-
-
-
 
 <!-- Footer -->
 <?php include "inc/footer.html" ?>
