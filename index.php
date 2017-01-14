@@ -27,9 +27,6 @@ include 'inc/php/connect.php';
 
 <h1 class="page-header text-center al">
        <img src="img/logo/al-logo.png" alt="Logo" id="a-logo">
-       <!-- this is the logo for AL tech for now but I woudl want someone
-       with desgin expiarances, later down the line.
-        -->
   </h1>
 
 
@@ -38,26 +35,18 @@ include 'inc/php/connect.php';
   col box left
   -->
 
-  <!--
-        the link, img h5 are all going to be stored in a database,
-     -->
-
-
   <div class="col-lg-3 col-md-6 col-sm-6 ">
 
-  <!--
-    1-1 Item pulled from DataBase
-  -->
+    <!--
+      1-1 Item pulled from DataBase
+    -->
    <div class="home-product-sm">
    <?php
-          $query = mysql_query("SELECT id, name, subt, text, url, type FROM post WHERE  id = '23' ");
+          $query = mysql_query("SELECT name, url FROM post WHERE  id = '23' ");
           while($run = mysql_fetch_array($query)){
           $pname = $run['name'];
-          $psubt = $run['subt'];
-          $text = $run['text'];
           $url = $run['url'];
-          $id = $run['id'];
-      ?>
+          ?>
 
     <a href="#">
      <div class="img-box">
@@ -65,57 +54,59 @@ include 'inc/php/connect.php';
      </div>
      <div class="title-box">
       <h5><strong><?php echo $pname; ?></strong></h5>
-      <h5><small><?php echo substr("$text",0,110);  echo "....";  ?></small></h5>
+      <h5><small><?php echo "This is a example project, to find the full version
+       or other projects like this go to Electronics Portfolio";  ?></small></h5>
      </div>
     </a>
     <?php } ?> <!-- end of php -->
    </div> <!-- end of div -->
 
 <!--
-    1-2 Item pulled from DataBase
+    1-1 Item pulled from DataBase
   -->
-   <div class="home-product-sm">
-   <?php
-          $query = mysql_query("SELECT id, name, subt, text, url, type FROM post WHERE  id = '16' ");
-          while($run = mysql_fetch_array($query)){
-          $pname = $run['name'];
-          $psubt = $run['subt'];
-          $text = $run['text'];
-          $url = $run['url'];
-          $id = $run['id'];
-      ?>
+  <div class="home-product-sm">
+  <?php
+         $query = mysql_query("SELECT name, url FROM post WHERE  id = '16' ");
+         while($run = mysql_fetch_array($query)){
+         $pname = $run['name'];
+         $url = $run['url'];
+         ?>
 
-    <a href="#">
-     <div class="img-box">
-      <img class="img-responsive" src="uploads/<?php echo "$url"; ?>" alt="">
-     </div>
-     <div class="title-box">
-      <h5><strong><?php echo $pname; ?></strong></h5>
-      <h5><small><?php echo substr("$text",0,110);  echo "....";  ?></small></h5>
-     </div>
-    </a>
-    <?php } ?> <!-- end of php -->
-   </div> <!-- end of div -->
+   <a href="#">
+    <div class="img-box">
+     <img class="img-responsive" src="uploads/<?php echo "$url"; ?>" alt="">
+    </div>
+    <div class="title-box">
+     <h5><strong><?php echo $pname; ?></strong></h5>
+     <h5><small><?php echo "This is a example project, to find the full version
+      or other projects like this go to Electronics Portfolio";  ?></small></h5>
+    </div>
+   </a>
+   <?php } ?> <!-- end of php -->
+  </div> <!-- end of div -->
 
-      <div class="home-product-sm">
-    <a href="#">
+    <!--
+     Local link to GitHub
+    -->
+
+    <div class="home-product-sm">
+     <a href="#">
      <div class="img-box">
      <img class="img-responsive" src="img/home/3.gif" alt="">
      </div>
      <div class="title-box">
       <h5>Electronics Portflio (Example)</h5>
-      <h5><small>@@@@@@@@@@@@@@@@@@@@</small></h5>
-      <h5><small>@@@@@@@@@@@@@@@@@@@@</small></h5>
+      <h5><small><?php echo "This is a example project, to find the full version
+       or other projects like this go to Electronics Portfolio";  ?></small></h5>
      </div>
     </a>
    </div>
 
-
-
-
   </div> <!-- end of left-->
 
-  <!-- col box right -->
+  <!--
+  col box right
+  -->
   <div class="col-lg-3 col-md-6 col-sm-6 ">
 
     <div class="home-product-sm">
@@ -160,7 +151,7 @@ include 'inc/php/connect.php';
 
 
 
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 "> <!-- col box left start -->
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 "> <!-- col box left start -->
 
    <!-- image on the left -->
     <div class="home-product">
@@ -193,9 +184,13 @@ include 'inc/php/connect.php';
    </div>
   </div> <!-- end col box left -->
 
-</div>
+</div> <!-- end of row -->
 
 </div> <!-- end of body page -->
+
+
+
+
 
 
 
